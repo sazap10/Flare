@@ -9,7 +9,7 @@ var router = express.Router();
 router.get('/ideas/', ideas.index);
 router.get('/idea/:id', ideas.idea);
 router.post('/idea', ideas.create);
-router.put('/idea/:id/vote', ideas.idea);
+router.put('/idea/:id/vote', ideas.vote);
 
 router.get('/person/:id', person.person);
 router.put('/person/:id/vote', person.vote);
