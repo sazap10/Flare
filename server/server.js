@@ -1,10 +1,12 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
-  path = require('path');
+  path = require('path'),
+  cors = require('cors');
 
 var app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', 3002);
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
