@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('flare').controller('VoteCtrl', function($scope, CommonService) {
-  CommonService.getIdea().then(function(result) {
+angular.module('flare').controller('VoteCtrl', function($scope, $stateParams,  CommonService) {
+  CommonService.getIdea($stateParams.id).then(function(result) {
     $scope.idea = result.data;
   }, function(result) {
     console.log(result.status);
