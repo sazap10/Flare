@@ -4,7 +4,7 @@ angular.module('flare').factory('CommonService', function($http, $q) {
     getIdeas: function() {
       var deferred = $q.defer();
       // $http.get('/service/runs')
-      $http.get('http:://localhost:3000/api/ideas')
+      $http.get('http://localhost:3002/api/ideas')
         .success(function(data, status) {
           deferred.resolve({status: status, data: data});
         })
@@ -17,7 +17,7 @@ angular.module('flare').factory('CommonService', function($http, $q) {
     getIdea: function(id) {
       var deferred = $q.defer();
       // $http.get('/service/runs')
-      $http.get('http:://localhost:3000/api/idea/' + id)
+      $http.get('http://localhost:3002/api/idea/' + id)
         .success(function(data, status) {
           deferred.resolve({status: status, data: data});
         })
@@ -30,7 +30,7 @@ angular.module('flare').factory('CommonService', function($http, $q) {
     submitIdea: function(payload) {
       var deferred = $q.defer();
       // $http.get('/service/runs')
-      $http.post('http:://localhost:3000/api/idea/', payload)
+      $http.post('http://localhost:3002/api/idea/', payload)
         .success(function(data, status) {
           deferred.resolve({status: status, data: data});
         })
