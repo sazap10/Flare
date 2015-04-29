@@ -1,8 +1,13 @@
 'use strict';
 
 angular.module('flare')
-  .controller('IdeasCtrl', function ($scope) {})
-
+  .controller('IdeasCtrl', function ($scope, CommonService) {
+    CommonService.getIdeas().then(function(result) {
+      $scope.ideas = result.data;
+    }, function(result) {
+      console.log(result.status);
+    });
+  })
   .directive('videoControls', function() {
       return {
         link : function(scope, element) {
