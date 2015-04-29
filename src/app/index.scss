@@ -5,12 +5,31 @@
   padding: 0.2em 0;
 }
 
+.navbar {
+  margin: 0px;
+  background-color: #B5B5BD;
+  span {
+    color: #FFFFFF;
+    font-size: 150%;
+    margin: 10px;
+  }
+  img {
+    display: inline;
+    max-height: 50px;
+    margin: auto;
+  }
+}
+
 .thumbnail {
   height: 200px;
 
   img.pull-right {
     width: 50px;
   }
+}
+
+.leftJustify {
+  float: left;
 }
 
 .rightJustify {
@@ -22,6 +41,11 @@
   margin: 0 auto;
 }
 
+.container-fluid.fullScreen {
+  margin-top: 50px;
+  padding: 0;
+  height: 100%;
+}
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
