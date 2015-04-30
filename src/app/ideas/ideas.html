@@ -1,9 +1,12 @@
 <div ng-include="'app/components/navbar/navbar.html'"></div>
-<div class="container-fluid fullScreen">
-  <div ng-show="voted" class="alert alert-success" role="alert">Thanks for voting, now go vote for some more ideas!</div>
-  <div ng-swipe-left="voteNo()" ng-swipe-right="voteYes()" class="container-fluid person">
-    <video ng-src="{{person.video}}" video-controls width="100%"></video>
-    <h3 class="list-group-item-text" ng-bind="person.title"></h3>
+    <div class="container-fluid fullScreen">
+      <div ng-show="voted" class="alert alert-success" role="alert">Thanks for voting, now go vote for some more ideas!</div>
+      <div ng-swipe-left="voteNo()" ng-swipe-right="voteYes()" class="container-fluid person">
+        <video ng-src="{{person.video}}" video-controls width="100%"></video>
+        <div class="title-bar">
+          <h3 class="list-group-item-text title" ng-bind="person.title"></h3>
+          <img class="icon-main" ng-src="{{icon}}" width="55" height="55">
+        </div>
     <p class="authorText" ng-bind-html="person.author"></p>
     <p class="summaryText" ng-bind="person.summary"></p>
     <div class="buttonDiv">
