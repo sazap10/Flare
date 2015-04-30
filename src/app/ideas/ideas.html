@@ -7,8 +7,8 @@
     <p class="summaryText" ng-bind="person.summary"></p>
     <div class="buttonDiv">
       <button role="button" class="btn smallButton left"><span class="glyphicon glyphicon-share"></span></button>
-      <button role="button" class="btn largeButton red"><span class="glyphicon glyphicon-thumbs-down"></span></button>
-      <button role="button" class="btn largeButton blue"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+      <button role="button" class="btn largeButton red"><span class="glyphicon glyphicon-thumbs-down inverse"></span><span ng-bind="' ' + person.votesNeg"></span></button>
+      <button role="button" class="btn largeButton blue"><span class="glyphicon glyphicon-thumbs-up"></span><span ng-bind="' ' + person.votesPos"></span></button>
       <button ng-click="goToVote()" role="button" class="btn smallButton right"><span>i</span></button>
     </div>
   </div>
