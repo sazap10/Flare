@@ -7,13 +7,15 @@
         Your Idea
       </div>
       <span class="flex-child">
-        <span class="previewBtn flex-child" ng-click="submit(idea, video)">Publish</span>
+        <span class="publishBtn flex-child" ng-click="submit(idea, video)">Publish</span>
       </span>
     </div>
   </div>
 </nav>
 <div class="container-fluid fullScreen createForm">
   <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+  <progressbar ng-hide="progress === 0" animate="true" value="progress" type="success"
+               class="progress-striped active"><b>Uploading {{progress}}%</b></progressbar>
   <div class="text-uppercase createIdeaForm">
     <div class="form-group  ">
       <label for="nameInput" class="col-xs-2 control-label">Title:</label>
@@ -31,13 +33,6 @@
       </div>
     </div>
     <div class="form-group ">
-      <label for="summaryInput" class="col-xs-2 control-label">Summary:</label>
-
-        <textarea rows="4" class="form-control" id="summaryInput" placeholder="Summary of the idea"
-                  ng-model="idea.summary"></textarea>
-
-    </div>
-    <div class="form-group ">
       <label for="contentInput" class="col-xs-2 control-label">Content:</label>
       <span class="btn btn-default btn-circle btn-file glyphicon glyphicon-facetime-video">
            <input type="file" id="videoInput" ngf-select="" ng-model="video" name="file" required=""
@@ -46,9 +41,13 @@
         <textarea rows="4" class="form-control" id="contentInput" placeholder="Content of the idea"
                   ng-model="idea.content"></textarea>
     </div>
-    <progressbar ng-hide="progress === 0" animate="true" value="progress" type="success"
-                 class="progress-striped active"><b>{{progress}}%</b></progressbar>
+    <div class="form-group ">
+      <label for="summaryInput" class="col-xs-2 control-label">Summary:</label>
+
+        <textarea rows="4" class="form-control" id="summaryInput" placeholder="Summary of the idea"
+                  ng-model="idea.summary"></textarea>
+
+    </div>
     </form>
-    <!--<button type="submit" class="btn btn-default" ng-click="submit(idea, video)">Submit</button>-->
   </div>
 </div>

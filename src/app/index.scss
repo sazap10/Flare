@@ -1,3 +1,13 @@
+@font-face {
+  font-family: NBS;
+  src: url('../assets/fonts/nbs-light-webfont.ttf');
+
+}
+
+body{
+  font-family: "NBS";
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -74,6 +84,14 @@
     border: 1px solid #e5e5e5;
     color: #cc5400;
   }
+
+  .ideaTitle{
+    font-size: 20pt;
+  }
+
+  .publishBtn{
+    font-size: 18pt;
+  }
 }
 
 .thumbnail {
@@ -108,9 +126,7 @@
   margin: 20px;
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(214, 214, 214);
+  border: 1px solid rgb(214, 214, 214);
   padding: 0px;
   h3{
     margin-top: 0px;
@@ -303,6 +319,10 @@
     cursor: inherit;
     display: block;
 
+  }
+
+  progressbar{
+    padding: 10px;
   }
 }
 
