@@ -7,9 +7,16 @@
         </div>
       </div>
       <span class="flex-child">
-        <span class="glyphicon glyphicon-share circle circle-white"></span>
-        <span class="glyphicon glyphicon-thumbs-down circle circle-red" ng-click="voteNo()"></span>
-        <span class="glyphicon glyphicon-thumbs-up circle circle-blue" ng-click="voteYes()"></span>
+        <span ng-show="showShare" class="circle circle-white" ng-click="share()"><img src="assets/icons/CloseX_35x35.png"></span>
+        <span ng-show="showShare" class="glyphicon glyphicon-envelope circle circle-white"></span>
+        <span ng-show="showShare" class="circle circle-white"><img
+          src="assets/icons/Twitter_44x36.png"></span>
+        <span ng-show="showShare" class="circle circle-white"><img
+          src="assets/icons/Facebook_40x40.png"></span>
+
+        <span ng-hide="showShare" class="glyphicon glyphicon-share circle circle-white" ng-click="share()"></span>
+        <span ng-hide="showShare" class="glyphicon glyphicon-thumbs-down circle circle-red" ng-click="voteNo()"></span>
+        <span ng-hide="showShare" class="glyphicon glyphicon-thumbs-up circle circle-blue" ng-click="voteYes()"></span>
       </span>
     </div>
   </div>
