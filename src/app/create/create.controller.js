@@ -9,7 +9,7 @@ angular.module('flare')
           Upload.upload({
             url: 'api/idea',
             method: 'POST',
-            fields: {'name': idea.name, 'summary': idea.summary, 'content': idea.content},
+            fields: {'title': idea.title, 'summary': idea.summary, 'content': idea.content, 'author': idea.author},
             file: file
           }).progress(function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);

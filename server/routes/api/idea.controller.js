@@ -4,7 +4,7 @@ var fs = require('fs');
 
 // Get list of ideas
 exports.index = function (req, res) {
-  fs.readFile('./data/ideas.json', function (err, data) {
+  fs.readFile('./server/data/ideas.json', function (err, data) {
     if (err) {
       console.log("Error reading file " + err);
       res.status(500).send("Error reading file ");
@@ -18,7 +18,7 @@ exports.index = function (req, res) {
 // Get specific idea
 exports.idea = function (req, res) {
   var id = req.params.id;
-  fs.readFile('./data/ideas.json', function (err, data) {
+  fs.readFile('./server/data/ideas.json', function (err, data) {
     if (err) {
       console.log("Error reading file " + err);
       res.status(500).send("Error reading file ");
@@ -42,9 +42,10 @@ exports.create = function (req, res) {
     path = path.replace(/\\/g, '/').replace(/^dist\//, '');
   }
   var idea = {
-    name: req.body.name,
     summary: req.body.summary,
     content: req.body.content,
+    title: req.body.title,
+    author: req.body.author,
     votesPos: 0,
     votesNeg: 0,
     video: path
