@@ -5,8 +5,18 @@ angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'app/ideas/ideas.html',
+        controller: 'IdeasCtrl'
+      })
+      .state('vote', {
+        url: '/vote/:id',
+        templateUrl: 'app/vote/vote.html',
+        controller: 'VoteCtrl'
+      })
+      .state('create', {
+        url: '/create',
+        templateUrl: 'app/create/create.html',
+        controller: 'CreateCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
