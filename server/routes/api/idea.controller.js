@@ -36,13 +36,21 @@ exports.idea = function (req, res) {
 
 // Create new idea
 exports.create = function (req, res) {
+  var path = "";
+  if(req.files){
+    path = req.files.file.path;
+    path = path.replace(/\\/g, '/').replace(/^dist\//, '');
+  }
   var idea = {
-    video: req.body.video,
     summary: req.body.summary,
     content: req.body.content,
+    title: req.body.title,
+    author: req.body.author,
     votesPos: 0,
-    votesNeg: 0
+    votesNeg: 0,
+    video: path
   };
+  console.log(idea);
   fs.readFile('./server/data/ideas.json', function (err, data) {
     if (err) {
       console.log("Error reading file " + err);

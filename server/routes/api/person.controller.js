@@ -2,10 +2,9 @@
  * Created by sachin on 29/04/2015.
  */
 'use strict';
-var jf = require('jsonfile');
 var util = require('util');
 var fs = require('fs');
-var filepath = './';
+var filepath = './server/data/';
 
 // Gets the person.
 exports.person = function (req, res) {

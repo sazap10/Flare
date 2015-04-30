@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap'])
+angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngFileUpload'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -9,7 +9,7 @@ angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.
         controller: 'IdeasCtrl'
       })
       .state('vote', {
-        url: '/vote/:id',
+        url: '/vote/:type/:id',
         templateUrl: 'app/vote/vote.html',
         controller: 'VoteCtrl'
       })
