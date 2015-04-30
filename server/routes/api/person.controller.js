@@ -12,7 +12,8 @@ exports.person = function (req, res) {
    res.send(util.inspect(obj));
    next();
    })*/
-  fs.readFile(filepath + 'person.json', 'utf8', function (err, data) {
+  fs.readFile(filepath + 'person.json', 'utf8', function
+    (err, data) {
     var jsondata = JSON.parse(data);
     res.writeHead(200, {'Content-Type': 'text/plain'});
     for (var i = 0; i < jsondata.length; i++) {
