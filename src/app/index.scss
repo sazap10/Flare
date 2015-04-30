@@ -454,13 +454,14 @@ div.alert {
 }
 
 .pillButtons {
+  margin-left: 20px;
   p {
     margin: 0px;
   }
   .pillButton {
     color: rgb(255, 255, 255);
-    padding: 0px 30px;
-    border-radius: 5px;
+    padding: 0px 25px;
+    border-radius: 10px;
     .inverse {
       transform: scaleX(-1);
     }
