@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('flare').controller('VoteCtrl', function($scope, $stateParams,  CommonService) {
-  $scope.showVideo = false;
+  $scope.showVideo = true;
   CommonService.getIdea($stateParams.id).then(function(result) {
     $scope.idea = result.data;
     if (result.data.votesNeg + result.data.votesPos > 0){
