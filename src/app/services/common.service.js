@@ -40,7 +40,7 @@ angular.module('flare').factory('CommonService', function($http, $q) {
       return deferred.promise;
     },
     getPerson: function(id) {
-      var deferree = $q.defer();
+      var deferred = $q.defer();
       $http.get('http://localhost:3002/api/person/' + id)
         .success(function(data, status) {
           deferred.resolve({status: status, data: data});
