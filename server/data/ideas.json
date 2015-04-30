@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "video": "",
+    "video": "assets/images/ui_0000_vid-01.png",
     "author": "Reverend Powell",
     "title": "Fix the local church roof",
     "summary": "We need to raise £1500 to get the roof fixed",
@@ -10,7 +10,7 @@
     "content": "<p>Nationwide has had a long history of aiding communities in times of need.  What better an example of this than by helping to fixed the local church roof after the horrific 02/15 storms?</p><p>The lord will look down on you kindly for this favour, and the people of Old Sodbury will be in your debt.</p>"
   },
   {
-    "video": "",
+    "video": "assets/images/ui_0001_vid-02.png",
     "author": "Dafydd",
     "title": "Llanddewi Brefi Nationwide",
     "summary": "Set up a branch in Llanddewi Brefi",
@@ -20,7 +20,7 @@
     "id": 1
   },
   {
-    "video": "",
+    "video": "assets/images/ui_0002_vid-03.png",
     "author": "The loving mothers of Britain",
     "title": "Increase savings rates",
     "summary": "Increase the child savings account interest rate",
@@ -30,7 +30,7 @@
     "id": 2
   },
   {
-    "video": "",
+    "video": "assets/images/ui_0003_vid-04.png",
     "author": "Dennis Reynolds",
     "title": "Lethal Weapon 7",
     "summary": "Fund the soon to be hit film: Lethal Weapon 7",

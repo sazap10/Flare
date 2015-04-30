@@ -1,12 +1,16 @@
 <div ng-include="'app/components/navbar/navbar-vote.html'"></div>
 <div class="container-fluid fullScreen">
+  <div ng-show="voted" class="alert alert-success" role="alert">Thanks for voting, taking you back to the home page!</div>
   <div class="list-group">
     <div class="list-group-item vote">
       <div ng-swipe-left="voteNo()" ng-swipe-right="voteYes()">
         <video ng-src="{{idea.video}}" ng-show="showVideo" video-controls width="100%" height="205px"></video>
         <img ng-show="showImage" ng-src="{{idea.video}}"/>
       </div>
-      <div class="title" ng-bind="idea.title"></div>
+      <div class="title-bar">
+        <div class="title" ng-bind="idea.title"></div>
+        <img ng-src="{{icon}}" width="55" height="55">
+      </div>
       <div class="author" ng-bind-html="htmlAuthor"></div>
 
       <p class="panel" ng-bind="idea.summary"></p>

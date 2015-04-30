@@ -22,23 +22,19 @@ angular.module('flare')
       console.log(result.status);
     });
     $scope.voteNo = function() {
-      if ($stateParams.type === 'idea') {
-        CommonService.voteIdea($scope.idea.id, -1);
-      } else {
-        CommonService.votePerson($scope.idea.id, -1)
+      if (!$scope.voted) {
+        CommonService.votePerson($scope.person.id, -1)
+        $scope.voted = true;
+        console.log('voted NO')
       }
-      $scope.voted = true;
-      console.log('voted NO')
     };
 
     $scope.voteYes = function() {
-      if ($stateParams.type === 'idea') {
-        CommonService.voteIdea($scope.idea.id, 1);
-      } else {
-        CommonService.votePerson($scope.idea.id, 1)
+      if (!$scope.voted) {
+        CommonService.votePerson($scope.person.id, 1)
+        $scope.voted = true;
+        console.log('voted YES')
       }
-      $scope.voted = true;
-      console.log('voted YES')
     };
 
     $scope.share = function() {
