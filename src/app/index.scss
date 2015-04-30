@@ -149,7 +149,12 @@ div.alert {
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
   border: 1px solid rgb(214, 214, 214);
-  padding: 0px;
+  padding: 0;
+
+  .title-bar {
+    margin-top: 10px;
+  }
+
   h3 {
     margin-top: 0px;
     font-size: 16pt;
@@ -159,6 +164,10 @@ div.alert {
   .authorText {
     margin-left: 10px;
     font-size: 8pt;
+
+    span {
+      font-style: italic;
+    }
   }
   .summaryText {
     margin-left: 10px;
@@ -289,25 +298,6 @@ div.alert {
     }
   }
 
-  .title-bar {
-    width: 100%;
-    display: inline-block;
-
-    .title {
-      display: inline-block;
-      color: #000088;
-      font-size: 22px;
-      margin: 20px 20px 0;
-      float: left;
-      width: 250px;
-    }
-
-    img {
-      display: inline-block;
-      margin-top: 20px;
-    }
-  }
-
   .author {
     margin: 5px 20px 10px 20px;
     span {
@@ -366,6 +356,34 @@ div.alert {
 
   .divider {
     border-bottom: solid 1px #D3D3D3;
+  }
+}
+
+.title-bar {
+  width: 100%;
+  display: inline-block;
+
+  h3 {
+    margin-right: 0 !important;
+  }
+
+  .title {
+    display: inline-block;
+    color: #000088;
+    font-size: 22px;
+    margin: 20px 20px 0;
+    float: left;
+    width: 250px;
+  }
+
+  img {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .icon-main {
+    position: absolute;
+    margin: 0;
   }
 }
 

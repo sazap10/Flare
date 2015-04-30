@@ -5,6 +5,7 @@ angular.module('flare')
     $scope.voted = false;
     $scope.showShare = false;
     $scope.personId = '';
+    $scope.icon = "assets/icons/CEOPhoto_110x110.png";
     $scope.goToVote = function() {
       $state.go('vote', {type:'person', id:$scope.personId})
     };
