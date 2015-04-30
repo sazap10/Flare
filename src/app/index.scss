@@ -123,7 +123,7 @@ body{
 }
 
 .container-fluid.person {
-  margin: 20px;
+  margin: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
   border: 1px solid rgb(214, 214, 214);
@@ -143,6 +143,7 @@ body{
     font-size: 11pt;
   }
   .buttonDiv {
+    margin-bottom: 10px;
     button {
       border-color: rgb(214, 214, 214);
     }
@@ -164,6 +165,21 @@ body{
     .left {
       float: left;
       margin-left: 30px;
+    }
+    .medButton {
+      margin: 0 14px;
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      img {
+        height: 25px;
+        width: 25px;
+      }
+      span {
+        font-size: 20pt;
+      }
     }
     .largeButton {
       height: 60px;
