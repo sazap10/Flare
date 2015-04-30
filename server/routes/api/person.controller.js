@@ -4,7 +4,7 @@
 'use strict';
 var util = require('util');
 var fs = require('fs');
-var filepath = './';
+var filepath = './server/data/';
 
 // Gets the person.
 exports.person = function (req, res) {
