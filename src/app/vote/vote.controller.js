@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('flare').controller('VoteCtrl', function($scope, $sce, $stateParams,  CommonService) {
+angular.module('flare').controller('VoteCtrl', function($scope, $sce, $stateParams, $state, $timeout,  CommonService) {
   $scope.showVideo = false;
   $scope.showImage = false;
   $scope.id = '';
@@ -12,6 +12,7 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
 
   if ($stateParams.type === "idea") {
     CommonService.getIdea($stateParams.id).then(function(result) {
+      $scope.voted = false;
       $scope.idea = result.data;
       if (result.data.votesNeg + result.data.votesPos > 0){
         $scope.percentage = ((result.data.votesPos/(result.data.votesPos + result.data.votesNeg)) * 100).toFixed(0);
@@ -37,26 +38,41 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
   }
 
   $scope.voteNo = function() {
-    if ($stateParams.type === 'idea') {
-      CommonService.voteIdea($scope.idea.id, -1);
-    } else {
-      CommonService.votePerson($scope.idea.id, -1)
+    if (!$scope.voted) {
+      if ($stateParams.type === 'idea') {
+        CommonService.voteIdea($scope.idea.id, -1);
+      } else {
+        CommonService.votePerson($scope.idea.id, -1)
+      }
+      console.log('voted NO');
+      $scope.voted = true;
+      $scope.leave();
     }
-    console.log('voted NO')
+
   };
 
   $scope.voteYes = function() {
-    if ($stateParams.type === 'idea') {
-      CommonService.voteIdea($scope.idea.id, 1);
-    } else {
-      CommonService.votePerson($scope.idea.id, 1)
+    if (!$scope.voted) {
+      if ($stateParams.type === 'idea') {
+        CommonService.voteIdea($scope.idea.id, 1);
+      } else {
+        CommonService.votePerson($scope.idea.id, 1)
+      }
+      console.log('voted YES')
+      $scope.voted = true;
+      $scope.leave();
     }
-    console.log('voted YES')
   };
 
   $scope.share = function() {
     $scope.showShare = !$scope.showShare;
     console.log($scope.showShare);
-  }
+  };
+
+  $scope.leave = function() {
+    $timeout(function() {
+      $state.go('home');
+    }, 3000);
+  };
 
 });

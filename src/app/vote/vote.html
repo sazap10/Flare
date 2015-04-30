@@ -1,5 +1,6 @@
 <div ng-include="'app/components/navbar/navbar-vote.html'"></div>
 <div class="container-fluid fullScreen">
+  <div ng-show="voted" class="alert alert-success" role="alert">Thanks for voting, taking you back to the home page!</div>
   <div class="list-group">
     <div class="list-group-item vote">
       <div ng-swipe-left="voteNo()" ng-swipe-right="voteYes()">
