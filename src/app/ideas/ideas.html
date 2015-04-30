@@ -4,7 +4,7 @@
   <div class="container-fluid person">
     <video ng-src="{{person.video}}" video-controls width="100%"></video>
     <h3 class="list-group-item-text" ng-bind="person.title"></h3>
-    <p class="authorText" ng-bind="person.author"></p>
+    <p class="authorText" ng-bind-html="person.author"></p>
     <p class="summaryText" ng-bind="person.summary"></p>
     <div class="buttonDiv">
       <button ng-hide="showShare" ng-click="share()" role="button" class="btn smallButton left"><span class="glyphicon glyphicon-share"></span></button>

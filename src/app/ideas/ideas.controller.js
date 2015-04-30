@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('flare')
-  .controller('IdeasCtrl', function ($scope, CommonService, $state) {
+  .controller('IdeasCtrl', function ($scope, CommonService, $state, $sce) {
     $scope.voted = false;
     $scope.showShare = false;
     $scope.personId = '';
@@ -11,6 +11,7 @@ angular.module('flare')
     CommonService.getPerson('1000').then(function(result) {
       $scope.person = result.data;
       $scope.personId = $scope.person.id;
+      $scope.person.author = $sce.trustAsHtml(result.data.author);
       console.log($scope.personId);
     }, function(result) {
       console.log(result.status);
