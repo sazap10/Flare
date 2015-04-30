@@ -2,7 +2,6 @@
  * Created by sachin on 29/04/2015.
  */
 'use strict';
-var jf = require('jsonfile');
 var util = require('util');
 var fs = require('fs');
 var filepath = './server/data/';
