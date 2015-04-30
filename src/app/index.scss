@@ -105,7 +105,7 @@
 }
 
 .container-fluid.person {
-  margin: 20px;
+  margin: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 3px;
   border-style: solid;
@@ -127,6 +127,7 @@
     font-size: 11pt;
   }
   .buttonDiv {
+    margin-bottom: 10px;
     button {
       border-color: rgb(214, 214, 214);
     }
