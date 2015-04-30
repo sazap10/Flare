@@ -71,6 +71,11 @@ div.alert {
       width: 15px;
       height: 15px;
     }
+
+    .idea {
+      width: 12px;
+      height: 18px;
+    }
   }
 
   .circle-blue {
@@ -269,10 +274,23 @@ div.alert {
     }
   }
 
-  .title {
-    color: #000088;
-    font-size: 22px;
-    margin: 20px 20px 0;
+  .title-bar {
+    width: 100%;
+    display: inline-block;
+
+    .title {
+      display: inline-block;
+      color: #000088;
+      font-size: 22px;
+      margin: 20px 20px 0;
+      float: left;
+      width: 250px;
+    }
+
+    img {
+      display: inline-block;
+      margin-top: 20px;
+    }
   }
 
   .author {

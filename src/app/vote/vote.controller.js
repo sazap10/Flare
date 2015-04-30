@@ -21,6 +21,7 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
       $scope.showImage = true;
       $scope.htmlContent = $sce.trustAsHtml(result.data.content);
       $scope.htmlAuthor = $sce.trustAsHtml(result.data.author);
+      $scope.icon = "assets/icons/DefaultUserIcon_110x110.png";
     }, function(result) {
       console.log(result.status);
     });
@@ -34,6 +35,7 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
       $scope.showImage = false;
       $scope.htmlContent = $sce.trustAsHtml(result.data.content);
       $scope.htmlAuthor = $sce.trustAsHtml(result.data.author);
+      $scope.icon = "assets/icons/CEOPhoto_110x110.png";
     });
   }
 
