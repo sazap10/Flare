@@ -2,6 +2,7 @@
 
 angular.module('flare')
   .controller('IdeasCtrl', function ($scope, CommonService, $state) {
+    $scope.voted = false;
     $scope.showShare = false;
     $scope.personId = '';
     $scope.goToVote = function() {
@@ -25,6 +26,7 @@ angular.module('flare')
       } else {
         CommonService.votePerson($scope.idea.id, -1)
       }
+      $scope.voted = true;
       console.log('voted NO')
     };
 
@@ -34,6 +36,7 @@ angular.module('flare')
       } else {
         CommonService.votePerson($scope.idea.id, 1)
       }
+      $scope.voted = true;
       console.log('voted YES')
     };
 

@@ -1,5 +1,6 @@
 <div ng-include="'app/components/navbar/navbar.html'"></div>
 <div class="container-fluid fullScreen">
+  <div ng-show="voted" class="alert alert-success" role="alert">WOOW</div>
   <div class="container-fluid person">
     <video ng-src="{{person.video}}" video-controls width="100%"></video>
     <h3 class="list-group-item-text" ng-bind="person.title"></h3>
@@ -7,8 +8,8 @@
     <p class="summaryText" ng-bind="person.summary"></p>
     <div class="buttonDiv">
       <button ng-hide="showShare" ng-click="share()" role="button" class="btn smallButton left"><span class="glyphicon glyphicon-share"></span></button>
-      <button ng-hide="showShare" role="button" class="btn largeButton red"><span class="glyphicon glyphicon-thumbs-down inverse"></span><span ng-bind="' ' + person.votesNeg"></span></button>
-      <button ng-hide="showShare" role="button" class="btn largeButton blue"><span class="glyphicon glyphicon-thumbs-up"></span><span ng-bind="' ' + person.votesPos"></span></button>
+      <button ng-hide="showShare" ng-click="voteNo()" role="button" class="btn largeButton red"><span class="glyphicon glyphicon-thumbs-down inverse"></span><span ng-bind="' ' + person.votesNeg"></span></button>
+      <button ng-hide="showShare" ng-click="voteYes()" role="button" class="btn largeButton blue"><span class="glyphicon glyphicon-thumbs-up"></span><span ng-bind="' ' + person.votesPos"></span></button>
       <button ng-hide="showShare" ng-click="goToVote()" role="button" class="btn smallButton right"><span>i</span></button>
       <button ng-show="showShare" role="button" class="btn medButton" ng-click="share()"><img src="assets/icons/CloseX_35x35.png"></button>
       <button ng-show="showShare" role="button" class="btn medButton"><span class="glyphicon glyphicon-envelope"></span></button>
