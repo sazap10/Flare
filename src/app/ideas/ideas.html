@@ -22,7 +22,7 @@
       <p class="listHeader">Your Vote, Your Say</p>
       <div class="list-group">
         <a ng-repeat="idea in ideas" ui-sref="vote({type:'idea', id:'{{idea.id}}'})" class="list-group-item">
-          <video ng-src="{{person.video}}"></video>
+          <img ng-src="{{idea.video}}"></img>
           <div class="pillButtons">
             <p ng-bind="idea.title"></p>
             <span class="pillButton red"><span class="glyphicon glyphicon-thumbs-down inverse"></span><span ng-bind="' ' + idea.votesNeg"></span></span>
