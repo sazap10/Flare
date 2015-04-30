@@ -207,6 +207,25 @@ body {
       font-size: 16px;
       margin-left: 20px;
     }
+    .redInverted {
+      color: rgb(184, 44, 44);
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(214, 214, 214);
+      font-size: 16px;
+      float: left;
+      margin-left: 20px;
+      .inverse {
+        transform: scaleX(-1);
+      }
+    }
+    .blueInverted {
+      color: rgb(23, 60, 195);
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(214, 214, 214);
+      font-size: 16px;
+      float: left;
+      margin-left: 20px;
+    }
   }
 }
 
@@ -237,9 +256,17 @@ body {
 }
 
 .list-group {
+  margin-bottom: 0;
+  p {
+    margin: 0px 10px;
+    padding-bottom: 10px;
+  }
   .vote {
     padding: 0;
     border: 0;
+    img {
+      max-width: 360px;
+    }
   }
 
   .title-bar {
@@ -439,6 +466,10 @@ body {
   .red {
     background-color: rgb(184, 44, 44);
   }
+}
+
+.thumbnailImage {
+  max-width: 40%;
 }
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject

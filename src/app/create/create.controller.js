@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('flare')
-  .controller('CreateCtrl', function ($scope, Upload) {
+  .controller('CreateCtrl', function ($scope, Upload, $state,$timeout) {
     $scope.progress = 0;
 
     $scope.alerts = [];
@@ -24,6 +24,7 @@ angular.module('flare')
           }).success(function (data, status, headers, config) {
             $scope.progress = 0;
             $scope.alerts.push({type: 'success', msg: 'Your idea has been created!'});
+            $timeout(function(){$state.go('home', {}, {reload: true});}, 500);
           });
         }
       }
