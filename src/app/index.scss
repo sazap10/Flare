@@ -111,6 +111,97 @@
   }
 }
 
+.createIdeaForm {
+  padding-top: 10px;
+  form, input, textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  input, label, textarea {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  input, textarea {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: 0 0;
+    box-shadow: none !important;
+  }
+
+  .form-group {
+    border-bottom: 1px solid #adadad;
+    min-height: 30px;
+  }
+
+  label {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .form-control {
+    height: inherit;
+  }
+
+  textarea{
+    padding: 10px;
+  }
+
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+    float:right;
+    color:#ec6e19;
+  }
+  .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+
+  }
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+
+  &.btn-lg{
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }
+  &.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+  }
+}
+
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
