@@ -18,7 +18,7 @@ router.post('/person/:id/video',
   [multer
   (
     {
-      dest: './uploads/',
+      dest: './server/data/video',
       changeDest: function (dest, req, res) {
         var newDestination = dest + req.params.id;
         console.log(newDestination);
