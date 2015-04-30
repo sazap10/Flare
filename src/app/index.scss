@@ -101,6 +101,102 @@
   margin-top: 50px;
   padding: 0;
   height: 100%;
+  background-color: rgb(238, 238, 238);
+}
+
+.container-fluid.person {
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(214, 214, 214);
+  padding: 0px;
+  h3{
+    margin-top: 0px;
+    font-size: 16pt;
+    color: rgb(24, 60, 195);
+    margin-left: 10px;
+  }
+  .authorText {
+    margin-left: 10px;
+    font-size: 8pt;
+  }
+  .summaryText {
+    margin-left: 10px;
+    font-size: 11pt;
+  }
+  .buttonDiv {
+    button {
+      border-color: rgb(214, 214, 214);
+    }
+    .smallButton {
+      margin-top: 10px;
+      color: rgb(236, 110, 25);
+      background-color: rgb(255, 255, 255);
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+    }
+    .right {
+      float: right;
+      margin-right: 30px;
+      span {
+        font-style: italic;
+      }
+    }
+    .left {
+      float: left;
+      margin-left: 30px;
+    }
+    .largeButton {
+      height: 60px;
+      width: 60px;
+      border-radius: 30px;
+    }
+    .red {
+      color: rgb(255, 255, 255);
+      background-color: rgb(184, 44, 44);
+      font-size: 16px;
+      float: left;
+      margin-left: 20px;
+      .inverse {
+        transform: scaleX(-1);
+      }
+    }
+    .blue {
+      color: rgb(255, 255, 255);
+      background-color: rgb(23, 60, 195);
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.container-fluid.ideaList {
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  padding: 0px;
+  p.listHeader {
+    font-size: 12pt;
+    margin-left: 15px;
+    margin-bottom: 0px;
+  }
+  .container-fluid {
+    padding: 0px;
+  }
+  .list-group {
+    border-width: 0px;
+  }
+  .list-group-item {
+    border-width: 0px;
+    video {
+      width: 30%;
+    }
+    div {
+      display:inline-block;
+    }
+  }
 }
 
 .list-group {
@@ -239,6 +335,26 @@
 
 .createForm {
   background: #eeeeee;
+}
+
+.pillButtons {
+  p {
+    margin: 0px;
+  }
+  .pillButton {
+    color: rgb(255, 255, 255);
+    padding: 0px 30px;
+    border-radius: 5px;
+    .inverse {
+      transform: scaleX(-1);
+    }
+  }
+  .blue {
+    background-color: rgb(23, 60, 195);
+  }
+  .red {
+    background-color: rgb(184, 44, 44);
+  }
 }
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject

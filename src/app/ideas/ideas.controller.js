@@ -1,9 +1,15 @@
 'use strict';
 
 angular.module('flare')
-  .controller('IdeasCtrl', function ($scope, CommonService) {
+  .controller('IdeasCtrl', function ($scope, CommonService, $state) {
+    $scope.personId = '';
+    $scope.goToVote = function() {
+      $state.go('vote', {type:'person', id:$scope.personId})
+    };
     CommonService.getPerson('1000').then(function(result) {
       $scope.person = result.data;
+      $scope.personId = $scope.person.id;
+      console.log($scope.personId);
     }, function(result) {
       console.log(result.status);
     });

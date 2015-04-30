@@ -3,19 +3,20 @@
 angular.module('flare').controller('VoteCtrl', function($scope, $sce, $stateParams,  CommonService) {
   $scope.showVideo = false;
   $scope.showImage = false;
+  $scope.id = '';
+  $scope.percentage = 0;
+  $scope.htmlContent = "";
   $scope.showShare = false;
 
   if ($stateParams.type === "idea") {
     CommonService.getIdea($stateParams.id).then(function(result) {
       $scope.idea = result.data;
       if (result.data.votesNeg + result.data.votesPos > 0){
-        $scope.idea.percentage = ((result.data.votesPos/(result.data.votesPos + result.data.votesNeg)) * 100).toFixed(0);
-      } else {
-        $scope.idea.percentage = 0;
+        $scope.percentage = ((result.data.votesPos/(result.data.votesPos + result.data.votesNeg)) * 100).toFixed(0);
       }
       $scope.showVideo = false;
       $scope.showImage = true;
-      $scope.idea.htmlContent = $sce.trustAsHtml(result.data.content);
+      $scope.htmlContent = $sce.trustAsHtml(result.data.content);
     }, function(result) {
       console.log(result.status);
     });
@@ -23,13 +24,11 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
     CommonService.getPerson($stateParams.id).then(function(result) {
       $scope.idea = result.data;
       if (result.data.votesNeg + result.data.votesPos > 0) {
-        $scope.idea.percentage = ((result.data.votesPos / (result.data.votesPos + result.data.votesNeg)) * 100).toFixed(0);
-      } else {
-        $scope.idea.percentage = 0;
+        $scope.percentage = ((result.data.votesPos / (result.data.votesPos + result.data.votesNeg)) * 100).toFixed(0);
       }
       $scope.showVideo = true;
       $scope.showImage = false;
-      $scope.idea.htmlContent = $sce.trustAsHtml(result.data.content);
+      $scope.htmlContent = $sce.trustAsHtml(result.data.content);
     });
   }
 
