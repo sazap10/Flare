@@ -6,14 +6,32 @@
 }
 
 .nav-center {
-  margin:0;
-  float:none;
+  margin: 0;
+  float: none;
 }
 
-.navbar-inner{
-  text-align:center;
+.flex-parent {
+  display: flex;
+  align-items: stretch;
+
+  :last-child {
+    color: #fd3427;
+  }
+
+  .flex-child {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    flex: 2 0 50px;
+    justify-content: center;
+  }
 }
 
+.navbar-inner {
+  text-align: center;
+}
 
 .navbar {
   margin: 0px;
@@ -44,19 +62,53 @@
   margin: 0 auto;
 }
 
-.vote-percent{
-  width: 100%;
-}
-
-.vote-content {
-  height: 246px;
-  display: block;
-}
-
 .container-fluid.fullScreen {
   margin-top: 50px;
   padding: 0;
   height: 100%;
+}
+
+.list-group {
+  .vote {
+    padding: 0;
+    border: 0;
+  }
+
+  .title {
+    color: #000088;
+    font-size: 22px;
+    margin: 20px 20px 0;
+  }
+
+  .by {
+    margin: 5px 20px 10px 20px;
+    span {
+      font-style: italic;
+    }
+  }
+
+  .vote-percent {
+    width: 100%;
+  }
+
+  .vote-content {
+    height: 233px;
+    display: block;
+    margin: 20px;
+  }
+
+  .panel {
+    margin: 20px;
+
+    p {
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .divider {
+    border-bottom: solid 1px #D3D3D3;
+  }
 }
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
