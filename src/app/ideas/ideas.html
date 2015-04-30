@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <a ng-repeat="idea in ideas" ng-href="#/vote/{{idea.id}}" class="list-group-item">
+    <a ng-repeat="idea in ideas" ng-href="#/vote/idea/{{idea.id}}" class="list-group-item">
       <span class="list-group-item-text" ng-bind="idea.summary"></span>
       <span class="glyphicon glyphicon-play rightJustify"></span>
     </a>
