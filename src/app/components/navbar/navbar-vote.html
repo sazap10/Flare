@@ -1,0 +1,16 @@
+<nav class="navbar navbar-fixed-top" ng-controller="NavbarCtrl">
+  <div class="container-fluid">
+    <div class="navbar-header flex-parent">
+      <span class="glyphicon glyphicon-menu-left flex-child" ui-sref="home"></span>
+      <div class="flex-child logo">
+        <div style="height: 50px;">
+        </div>
+      </div>
+      <span class="flex-child">
+        <span class="glyphicon glyphicon-share circle circle-white"></span>
+        <span class="glyphicon glyphicon-thumbs-down circle circle-red" ng-click="voteNo()"></span>
+        <span class="glyphicon glyphicon-thumbs-up circle circle-blue" ng-click="voteYes()"></span>
+      </span>
+    </div>
+  </div>
+</nav>

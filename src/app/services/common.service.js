@@ -38,6 +38,32 @@ angular.module('flare').factory('CommonService', function($http, $q) {
           deferred.reject({status: status, data: data});
         });
       return deferred.promise;
+    },
+
+    voteForPerson: function(id, vote) {
+      var deferred = $q.defer();
+      // $http.get('/service/runs')
+      $http.put('http://localhost:3002/api/person/' + id + '/vote', {'vote':vote})
+        .success(function(data, status) {
+          deferred.resolve({status: status, data: data});
+        })
+        .error(function(data, status) {
+          deferred.reject({status: status, data: data});
+        });
+      return deferred.promise;
+    },
+
+    voteForIdea: function(id, vote) {
+      var deferred = $q.defer();
+      // $http.get('/service/runs')
+      $http.put('http://localhost:3002/api/idea/' + id + '/vote', {'vote':vote})
+        .success(function(data, status) {
+          deferred.resolve({status: status, data: data});
+        })
+        .error(function(data, status) {
+          deferred.reject({status: status, data: data});
+        });
+      return deferred.promise;
     }
   };
 });
