@@ -54,6 +54,12 @@ div.alert {
   text-align: center;
 }
 
+.menuImage {
+  margin: auto 5px;
+  width: 21px;
+  height: 10px;
+}
+
 .navbar {
   margin: 0px;
   background-color: #FFFFFF;
@@ -174,8 +180,9 @@ div.alert {
     .right {
       float: right;
       margin-right: 30px;
-      span {
-        font-style: italic;
+      img {
+        width: 7px;
+        height: 19px;
       }
     }
     .left {

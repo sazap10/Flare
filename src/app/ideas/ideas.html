@@ -10,7 +10,7 @@
       <button ng-hide="showShare" ng-click="share()" role="button" class="btn smallButton left"><span class="glyphicon glyphicon-share"></span></button>
       <button ng-hide="showShare" ng-click="voteNo()" role="button" class="btn largeButton" ng-class="{red:!voted, redInverted:voted}"><span class="glyphicon glyphicon-thumbs-down inverse"></span><span ng-show="voted" ng-bind="' ' + person.votesNeg"></span></button>
       <button ng-hide="showShare" ng-click="voteYes()" role="button" class="btn largeButton" ng-class="{blue:!voted, blueInverted:voted}"><span class="glyphicon glyphicon-thumbs-up"></span><span ng-show="voted" ng-bind="' ' + person.votesPos"></span></button>
-      <button ng-hide="showShare" ng-click="goToVote()" role="button" class="btn smallButton right"><span>i</span></button>
+      <button ng-hide="showShare" ng-click="goToVote()" role="button" class="btn smallButton right"><img src="assets/icons/info_14x37.png"/></button>
       <button ng-show="showShare" role="button" class="btn medButton" ng-click="share()"><img src="assets/icons/CloseX_35x35.png"></button>
       <button ng-show="showShare" role="button" class="btn medButton"><span class="glyphicon glyphicon-envelope"></span></button>
       <button ng-show="showShare" role="button" class="btn medButton"><img src="assets/icons/Twitter_44x36.png"></button>
