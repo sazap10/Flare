@@ -9,7 +9,7 @@ angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.
         controller: 'IdeasCtrl'
       })
       .state('vote', {
-        url: '/vote/:id',
+        url: '/vote/:type/:id',
         templateUrl: 'app/vote/vote.html',
         controller: 'VoteCtrl'
       })

@@ -39,6 +39,41 @@
   img {
     max-height: 50px;
   }
+
+  .circle {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-top: 9px;
+    /*border: 1px solid #BADA55;*/
+    color: #fff;
+
+    img {
+      position: relative;
+      top: -3px;
+      left: -1px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .circle-blue {
+    background: #0000ff;
+  }
+
+  .circle-red {
+    background: #fd3427;
+    transform: scaleX(-1);
+    margin-right: 5px;
+  }
+
+  .circle-white {
+    background: transparent;
+    margin-right: 5px;
+    border: 1px solid #e5e5e5;
+    color: #cc5400;
+  }
 }
 
 .thumbnail {
