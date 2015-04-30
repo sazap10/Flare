@@ -251,9 +251,17 @@ body {
 }
 
 .list-group {
+  margin-bottom: 0;
+  p {
+    margin: 0px 10px;
+    padding-bottom: 10px;
+  }
   .vote {
     padding: 0;
     border: 0;
+    img {
+      max-width: 360px;
+    }
   }
 
   .title {
