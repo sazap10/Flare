@@ -98,7 +98,6 @@ exports.vote = function (req, res) {
           res.status(500).send("Error writing file");
           return;
         }
-        console.log('Saved Ideas');
         res.sendStatus(200);
       });
     } else {

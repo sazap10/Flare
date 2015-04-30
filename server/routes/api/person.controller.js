@@ -39,7 +39,7 @@ exports.vote = function (req, res) {
       }
       console.log(jsondata);
       fs.writeFile(filepath + 'person.json', JSON.stringify(jsondata));
-      res.write(JSON.stringify(jsondata));
+      res.status(200);
     }
     res.end();
   });
