@@ -4,7 +4,7 @@
 
 }
 
-body{
+body {
   font-family: "NBS";
 }
 
@@ -85,11 +85,11 @@ body{
     color: #cc5400;
   }
 
-  .ideaTitle{
+  .ideaTitle {
     font-size: 20pt;
   }
 
-  .publishBtn{
+  .publishBtn {
     font-size: 18pt;
   }
 }
@@ -128,7 +128,7 @@ body{
   border-radius: 3px;
   border: 1px solid rgb(214, 214, 214);
   padding: 0px;
-  h3{
+  h3 {
     margin-top: 0px;
     font-size: 16pt;
     color: rgb(24, 60, 195);
@@ -245,7 +245,7 @@ body{
       width: 30%;
     }
     div {
-      display:inline-block;
+      display: inline-block;
     }
   }
 }
@@ -262,7 +262,7 @@ body{
     margin: 20px 20px 0;
   }
 
-  .by {
+  .author {
     margin: 5px 20px 10px 20px;
     span {
       font-style: italic;
@@ -281,10 +281,40 @@ body{
 
   .panel {
     margin: 20px;
+    box-shadow: none;
 
     p {
       font-weight: bold;
-      margin: 0;
+      margin: 0 0 10px;
+    }
+
+    img {
+      width: 320px;
+      height: 180px;
+    }
+  }
+
+  .content-result-detail > div {
+    font-weight: bold;
+  }
+  .content-result-item {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .content-detail-success {
+    color: green;
+  }
+  .content-detail-failed {
+    color: red;
+  }
+  .content-detail-desc {
+    font-weight: normal !important;
+  }
+  li {
+    margin-bottom: 4px;
+    font-weight: bold;
+    div, span {
+      font-weight: normal;
     }
   }
 
@@ -329,15 +359,15 @@ body{
     height: inherit;
   }
 
-  textarea{
+  textarea {
     padding: 10px;
   }
 
   .btn-file {
     position: relative;
     overflow: hidden;
-    float:right;
-    color:#ec6e19;
+    float: right;
+    color: #ec6e19;
   }
   .btn-file input[type=file] {
     position: absolute;
@@ -356,7 +386,7 @@ body{
 
   }
 
-  progressbar{
+  progressbar {
     padding: 10px;
   }
 }
@@ -370,7 +400,7 @@ body{
   line-height: 1.428571429;
   border-radius: 15px;
 
-  &.btn-lg{
+  &.btn-lg {
     width: 50px;
     height: 50px;
     padding: 10px 16px;

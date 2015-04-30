@@ -6,7 +6,9 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
   $scope.id = '';
   $scope.percentage = 0;
   $scope.htmlContent = "";
+  $scope.htmlAuthor = "";
   $scope.showShare = false;
+
 
   if ($stateParams.type === "idea") {
     CommonService.getIdea($stateParams.id).then(function(result) {
@@ -17,6 +19,7 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
       $scope.showVideo = false;
       $scope.showImage = true;
       $scope.htmlContent = $sce.trustAsHtml(result.data.content);
+      $scope.htmlAuthor = $sce.trustAsHtml(result.data.author);
     }, function(result) {
       console.log(result.status);
     });
@@ -29,6 +32,7 @@ angular.module('flare').controller('VoteCtrl', function($scope, $sce, $statePara
       $scope.showVideo = true;
       $scope.showImage = false;
       $scope.htmlContent = $sce.trustAsHtml(result.data.content);
+      $scope.htmlAuthor = $sce.trustAsHtml(result.data.author);
     });
   }
 
