@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap'])
+angular.module('flare', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngFileUpload'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

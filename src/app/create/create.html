@@ -1,21 +1,25 @@
-<nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Gulp Angular
-      </a>
+<div ng-include="'app/components/navbar/navbar.html'"></div>
+<div class="container-fluid fullScreen">
+  <form>
+    <div class="form-group">
+      <label for="nameInput">Name</label>
+      <input type="text" class="form-control" id="nameInput" placeholder="Enter name for idea" ng-model="idea.name">
     </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li>Current date: {{ date | date:'yyyy-MM-dd' }}</li>
-      </ul>
+    <div class="form-group">
+      <label for="summaryInput">Summary</label>
+      <input type="text" class="form-control" id="summaryInput" placeholder="Summary of the idea"
+             ng-model="idea.summary">
     </div>
-  </div>
-</nav>
+    <div class="form-group">
+      <label for="contentInput">Content</label>
+      <input type="text" class="form-control" id="contentInput" placeholder="Content of the idea"
+             ng-model="idea.content">
+    </div>
+    <div class="form-group">
+      <label for="videoInput">Upload Video</label>
+      <input type="file" id="videoInput" ngf-select="" ng-model="video" name="file" required=""
+             class="ng-pristine ng-invalid ng-invalid-required">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="submit(idea, video)">Submit</button>
+  </form>
+</div>
